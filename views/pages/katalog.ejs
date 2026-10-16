@@ -1,0 +1,38 @@
+<%- include('../partials/header', { pageTitle:'Katalog Produk'}) %>
+<section class = "catalog-header">
+    <p class="eyebrow"p>Katalog Produk</p>
+    <h1>Katalog produk</h1>
+    <p class="subtitle">
+        Temukan beberapa produk pilihan yang tersedia pada aplikasi ini.
+    </p> 
+    </section>
+    <section class="catalog-grid">
+        <article classs="product-card">
+            <div class="product-icon"></div>
+            <h2>Sistem Manajemen Kelas</h2>
+            <p>Sistem untuk mengelola pembagian kelas</p>
+        </article>
+        <article classs="product-card">
+            <div class="product-icon"></div>
+            <h2>Sistem Inventaris Bangku</h2>
+            <p>Sistem untuk mengelola data barang dan stock</p>
+        </aticle>
+        <article classs="product-card">
+            <div class="product-icon"></div>
+            <h2>Sistem Pengelolaan Perpustakaan</h2>
+            <p>Sistem untuk mengelola data buku, anggota, peminjaman</p>
+        </article>
+    </section>   
+<%- include('../partials/footer') %>
+<div class="card" style="margin-top: 2rem;">
+<h2>Form Tambah Produk</h2>
+<!-- Formulir mengirim data melalui metode HTTP POST -->
+<form action="/katalog/tambah" method="POST">
+<div style="margin-bottom: 1rem;">
+<label for="namaProduk">Nama Produk:</label><br>
+<!-- Atribut 'name' adalah kunci penting untuk dibaca di Back-End -->
+<input type="text" id="namaProduk" name="namaProduk" required>
+</div>
+<button type="submit">Kirim Payload</button>
+</form> 
+</div>
