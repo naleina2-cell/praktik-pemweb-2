@@ -1,0 +1,53 @@
+<!-- Memanggil partial header -->
+<%- include('../partials/header', { pageTitle: pageTitle }) %>
+
+<!-- Judul Halaman Katalog -->
+<section class="page-heading">
+  <span class="eyebrow">KOLEKSI PERPUSTAKAAN</span>
+
+  <h1>Katalog Buku</h1>
+
+  <p>
+    Jelajahi daftar buku yang tersedia
+    di PustakaKita.
+  </p>
+
+  <a href="/katalog/tambah" class="button">
+    + Tambah Buku
+  </a>
+</section>
+
+<!-- Menampilkan data buku dari controller -->
+<section class="grid">
+
+  <!-- Loop array object menggunakan EJS -->
+  <% daftarBuku.forEach(buku => { %>
+
+    <article class="card book-card">
+
+      <div class="book-cover">
+        📚
+      </div>
+
+      <span class="category">
+        <%= buku.kategori %>
+      </span>
+
+      <h2><%= buku.judul %></h2>
+
+      <p>
+        Jumlah Halaman: <%= buku.halaman %>
+      </p>
+
+      <p class="book-id">
+        ID Buku: <%= buku.id %>
+      </p>
+
+    </article>
+
+  <% }) %>
+
+</section>
+
+<!-- Memanggil partial footer -->
+<%- include('../partials/footer') %>

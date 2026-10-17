@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f8f5ef;
+  color: #34302b;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.site-header { background: white; padding: 20px; }
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo { font-size: 24px; font-weight: bold; color: #76543d; }
+.nav-links { display: flex; gap: 15px; flex-wrap: wrap; align-items: center; }
+
+.container { max-width: 1100px; margin: auto; padding: 35px 20px; min-height: 75vh; }
+
+.hero, .highlight {
+  background: #eee2d1;
+  padding: 45px 25px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+h1 { font-size: 36px; }
+h2 { margin-bottom: 12px; }
+p { margin: 10px 0; }
+
+.section, .highlight { margin-top: 35px; }
+.page-heading { margin-bottom: 25px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px #00000012;
+}
+
+.book-cover { font-size: 48px; text-align: center; }
+.category, .eyebrow { color: #76543d; font-weight: bold; }
+
+.button, .nav-button, button {
+  display: inline-block;
+  background: #76543d;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.form-card { max-width: 650px; }
+.form-group { margin-bottom: 20px; }
+label { display: block; font-weight: bold; margin-bottom: 6px; }
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.button-secondary { margin-left: 15px; }
+.footer { text-align: center; padding: 25px; background: white; }
+
+@media (max-width: 600px) {
+  h1 { font-size: 28px; }
+  .navbar { flex-direction: column; }
+}
